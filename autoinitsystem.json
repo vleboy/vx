@@ -1,0 +1,27 @@
+{
+    "apps":[{
+        "name":"vx",
+        "script":"server.js",
+        "instances":2,
+        "env":{
+            "COMMON_VARIABLE":"true"
+        },
+        "env_production":{
+            "NODE_ENV":"production"
+        }
+    }],
+    "deploy":{
+        "production":{
+            "user":"vleboy",
+            "host":["192.168.3.20"],
+            "ref":"vx/master",
+            "repo":"git@github.com:vleboy/vx.git",
+            "path":"/home/vleboy/work/vx/produciton",
+            "ssh_options":"StrictHostKeyChecking=no",
+            "pre-deploy-local":"echo 'Deploy Done !'",
+            "env":{
+                "NODE_ENV":"production"
+            }           
+        }
+    }
+}
