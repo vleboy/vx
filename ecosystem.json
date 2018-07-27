@@ -12,8 +12,10 @@
     }],
     "deploy":{
         "production":{
-            "user":"root",
-            "host":["192.168.3.20"],
+            "key":"/Users/james/.ssh/id_rsa.pub",
+	    "user":"root",
+	    "port":"6000",
+            "host":["home.rottagame.com"],
             "ref":"vx/master",
             "repo":"git@github.com:vleboy/vx.git",
             "path":"/home/vleboy/work/vx/produciton",
