@@ -2,7 +2,6 @@
     "apps":[{
         "name":"vx",
         "script":"server.js",
-        "instances":2,
         "env":{
             "COMMON_VARIABLE":"true"
         },
@@ -17,7 +16,6 @@
 	    "port":"6000",
             "ref":"vx/master",
             "repo":"git@github.com:vleboy/vx.git",
-	    "key":"/Users/james/.ssh/vleboy-GitHub",
             "path":"/tmp",
             "ssh_options":"StrictHostKeyChecking=no",
             "pre-deploy-local":"echo 'Deploy Done !'",
@@ -25,5 +23,6 @@
                 "NODE_ENV":"production"
             }           
         }
-    }
 }
+}
+
